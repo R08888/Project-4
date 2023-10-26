@@ -1,15 +1,11 @@
-
 #include <TinyGPS++.h>
-#include <SoftwareSerial.h>
-//SoftwareSerial serial_gps(2, 3); 
 #define serial_gps Serial1
 TinyGPSPlus gps;
 
 void setup() {
-  Serial.begin(9600);
-//  serial_gps.begin(9600);
+Serial.begin(9600);
 serial_gps.begin(9600, SERIAL_8N1, 27, 26);
-  Serial.println("GPS Mulai");
+Serial.println("GPS Mulai");
 }
 
 void loop() {
